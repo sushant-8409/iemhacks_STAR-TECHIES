@@ -13,3 +13,11 @@ document.getElementById('bookAppointment').addEventListener('click', () => {
     alert('Emergency appointment booked!');
 });
 
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 0) {
+        navbar.classList.add('sticky-nav');
+    } else {
+        navbar.classList.remove('sticky-nav');
+    }
+});
