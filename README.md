@@ -20,4 +20,4 @@ We have created a professional, user-friendly and responsive website for a hospi
    Discord id :-    alam#6453
 
 ### PROBLEM STATEMENT
-      There is an absolute lacking of contact information, emergency appointment booking, doctor profiles, services overview. There are several general problems related to healthcare access ease, information dissemination, and user convenience. How will you solve it ?
+      There is an absolute lack of contact information, emergency appointment booking, doctor profiles, services overview. There are several general problems related to healthcare access ease, information dissemination, and user convenience. How will you solve it ?
