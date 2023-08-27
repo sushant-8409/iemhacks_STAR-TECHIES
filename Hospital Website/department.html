@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Departments</title>
+    <link rel="stylesheet" href="try1.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Hospital Departments</h1>
+    </div>
+    <!-- edit -->
+
+    <h2><b>Departments</b></h2>
+    <ul>
+        <li>Cardiology</li>
+        <li>Neurology</li>
+        <li>Oncology</li>
+        <li>Orthopedics</li>
+    </ul>
+
+    <!-- edit -->
+    <div class="content"></div>
+
+    <script>
+       // Replace with your own data
+       var hospitalData = {
+           departments:[
+               {
+                   name:"Cardiology",
+                   description:"The Cardiology Department provides comprehensive diagnostic and treatment services for patients with heart and vascular conditions.",
+                   imageSrc:"https://i.imgur.com/9u6GgNq.jpg",
+                   doctors:[
+                       {name:"Dr. John Smith",title:"Chief of Cardiology",imageSrc:"https://i.imgur.com/9u6GgNq.jpg"},
+                       {name:"Dr. Jane Doe",title:"Cardiologist",imageSrc:"https://i.imgur.com/9u6GgNq.jpg"},
+                       {name:"Dr. Bob Johnson",title:"Cardiologist",imageSrc:"https://i.imgur.com/9u6GgNq.jpg"}
+                   ]
+               },
+               {
+                   name:"Neurology",
+                   description:"The Neurology Department provides comprehensive diagnostic and treatment services for patients with neurological conditions.",
+                   imageSrc:"https://i.imgur.com/9u6GgNq.jpg",
+                   doctors:[
+                       {name:"Dr. Alice Brown",title:"Chief of Neurology",imageSrc:"https://i.imgur.com/9u6GgNq.jpg"},
+                       {name:"Dr. Charlie Davis",title:"Neurologist",imageSrc:"https://i.imgur.com/9u6GgNq.jpg"},
+                       {name:"Dr. Eve Foster",title:"Neurologist",imageSrc:"https://i.imgur.com/9u6GgNq.jpg"}
+                   ]
+               },
+               {
+                   name:"Oncology",
+                   description:"The Oncology Department provides comprehensive diagnostic and treatment services for patients with cancer.",
+                   imageSrc:"https://i.imgur.com/9u6GgNq.jpg",
+                   doctors:[
+                       {name:"Dr. George Hill",title:"Chief of Oncology",imageSrc:"https://i.imgur.com/9u6GgNq.jpg"},
+                       {name:"Dr. Isaac Jones",title:"Oncologist",imageSrc:"https://i.imgur.com/9u6GgNq.jpg"},
+                       {name:"Dr. Kevin Lee",title:"Oncologist",imageSrc:"https://i.imgur.com/9u6GgNq.jpg"}
+                   ]
+               },
+               {
+                   name:"Orthopedics",
+                   description:"The Orthopedics Department provides comprehensive diagnostic and treatment services for patients with musculoskeletal conditions.",
+                   imageSrc:"https://i.imgur.com/9u6GgNq.jpg",
+                   doctors:[
+                       {name:"Dr. Laura Miller",title:"Chief of Orthopedics",imageSrc:"https://i.imgur.com/9u6GgNq.jpg"},
+                       {name:"Dr. Noah Parker",title:"Orthopedic Surgeon",imageSrc:"https://i.imgur.com/9u6GgNq.jpg"},
+                       {name:"Dr. Olivia Quinn",title:"Orthopedic Surgeon",imageSrc:"https://i.imgur.com/9u6GgNq.jpg"}
+                   ]
+               }
+           ]
+       };
+
+       var content = document.querySelector(".content");
+       hospitalData.departments.forEach(function(department){
+           var departmentDiv = document.createElement("div");
+           departmentDiv.className = "department";
+
+           var departmentImage = document.createElement("img");
+           departmentImage.className = "department-image";
+           departmentImage.src = department.imageSrc;
+
+           var departmentName = document.createElement("div");
+           departmentName.className = "department-name";
+           departmentName.textContent = department.name;
+
+           var departmentDescription = document.createElement("div");
+           departmentDescription.className = "department-description";
+           departmentDescription.textContent = department.description;
+
+           var doctorList = document.createElement("ul");
+           doctorList.className = "doctor-list";
+           
+           department.doctors.forEach(function(doctor){
+               var li = document.createElement("li");
+               var doctorImage = document.createElement("img");
+               doctorImage.className = "doctor-image";
+               doctorImage.src = doctor.imageSrc;
+               li.appendChild(doctorImage);
+               li.appendChild(document.createTextNode(doctor.name + ", " + doctor.title));
+               doctorList.appendChild(li);
+           });
+
+           departmentDiv.appendChild(departmentImage);
+           departmentDiv.appendChild(departmentName);
+           departmentDiv.appendChild(departmentDescription);
+           departmentDiv.appendChild(doctorList);
+
+           content.appendChild(departmentDiv);
+       });
+   </script>
+</body>
+</html>
