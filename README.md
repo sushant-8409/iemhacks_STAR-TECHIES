@@ -7,7 +7,7 @@ We have created a professional, user-friendly and responsive website for a hospi
      Email id. :- sushantkumarsingh8409@gmail.com
      Discord ID :- sushant_8409
 2.   Name :-    Aman Raj
-    Mob no. :- 98877 50094
+    Mob no. :- 9887750094
     Email id. :- amanraj0149@gmail.com
     Discord ID  :- Skyaman#0402
 3.  Name :-        Ritesh Verma
