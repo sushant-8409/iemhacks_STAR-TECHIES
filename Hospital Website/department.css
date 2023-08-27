@@ -1,70 +1,44 @@
-body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #216af2;
-            color: white;
-            padding: 20px;
-            text-align: centre;
-        }
-        .header h1 {
-            margin: 0;
-        }
-        .content {
-            padding: 20px;
-        }
-        .department {
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-        }
-        .department-image {
-            height: 200px;
-            margin-bottom: 20px;
-            object-fit: cover;
-            width: 100%;
-        }
-        .department-name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .department-description {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .doctor-list {
-            list-style: none;
-            padding: 0;
-        }
-        .doctor-list li {
-            align-items:center;
-            display:flex;
-            margin-bottom:10px;
-        }
-        .doctor-image{
-            border-radius:50%;
-            height:50px;
-            margin-right:10px;
-            width:50px; 
-        }
-        @media (max-width:600px){
-           .doctor-image{
-               height:30px;
-               width:30px; 
-           } 
-           .doctor-list li{
-               font-size:.8em; 
-           }
-           .department-name{
-               font-size:1.2em; 
-           }
-           .department-description{
-               font-size:.9em; 
-           }
-           .department-image{
-               height:auto; 
-           }
-       }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.departments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.department-card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.department-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.department-card h2 {
+    margin-top: 10px;
+}
+
+.department-card p {
+    margin-top: 10px;
+    font-size: 14px;
+}
